@@ -179,17 +179,20 @@ The release validator checks the 800-chunk model-selection table, the 738-chunk 
 
 Model-implied bistability is reported in normalized-fluorescence coordinates. Fitted `w_EE` and `h` are effective model coefficients rather than direct physiological measurements.
 
-## Release status
+## Reproducibility status
 
-This package is a **release candidate**. Before tagging `v1.0.0`:
+The cohort analysis outputs included in this repository have been collected from the completed Narval analyses and validated using the repository release checks.
 
-1. collect the complete derived tables from the finished Narval analysis;
-2. run `python run_pipeline.py validate-release`;
-3. confirm the repository URL in `CITATION.cff`;
-4. make the repository public;
-5. archive the tagged release and insert the permanent DOI into the manuscript.
+The repository contains the analysis code and derived tables supporting the manuscript, including:
 
-See `docs/RELEASE_CHECKLIST.md`.
+- model selection across 800 chunks;
+- primary nonlinear-dynamics analysis across 738 inference-valid chunks;
+- sensitivity analysis across all 800 chunks;
+- fixed-parameter neural-state reconstruction across 40 recordings;
+- longitudinal and hierarchical analyses across 10 mice.
+
+A permanent archival DOI will be added after the `v1.0.0` release is deposited in Zenodo.
+
 
 ## License and citation
 
