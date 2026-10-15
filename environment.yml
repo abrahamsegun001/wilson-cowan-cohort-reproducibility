@@ -1,0 +1,17 @@
+name: wilson-cowan-cohort
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy>=1.24
+  - scipy>=1.10
+  - pandas>=2.0
+  - matplotlib>=3.7
+  - statsmodels>=0.14
+  - h5py>=3.8
+  - scikit-image>=0.21
+  - pyyaml>=6.0
+  - pytorch>=2.1
+  - pip

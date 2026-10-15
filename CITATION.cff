@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated manuscript and this software release."
+title: "Reproducibility package for cohort-scale Wilson-Cowan inference from widefield calcium imaging"
+type: software
+authors:
+  - family-names: "Oluwasegun"
+    given-names: "Abraham Ajeolu"
+    orcid: "https://orcid.org/0009-0005-2295-968X"
+repository-code: "https://github.com/abrahamsegun001/wilson-cowan-cohort-reproducibility"
+license: BSD-3-Clause
+version: "1.0.0-rc2"
+date-released: "2026-10-15"

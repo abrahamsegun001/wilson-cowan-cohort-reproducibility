@@ -1,0 +1,29 @@
+{
+  "n_recordings": 40,
+  "selection_rule": "For each recording, use the inference-valid chunk closest to temporal midpoint chunk 10; lower chunk index breaks ties; selection is made before gPINN training and is independent of reconstruction performance.",
+  "training_design": "Independent cold-start fixed-parameter gPINN per recording; no sequential warm-start and no continuity loss.",
+  "validation_interpretation": "Random-pointwise spatiotemporal interpolation within each selected 30-s chunk; not forecasting.",
+  "state_r2": {
+    "mean": 0.8303188940833746,
+    "sd": 0.059588263312829154,
+    "median": 0.8366464773477056,
+    "q25": 0.7720111397355386,
+    "q75": 0.8723872713855778,
+    "min": 0.7184077131521056,
+    "max": 0.953430994804561
+  },
+  "state_mse_mean": 0.0005812236487178075,
+  "neural_pde_rmse_mean": 0.07601127678559191,
+  "median_performance_example": {
+    "label": "median",
+    "target_quantile_r2": 0.8366464773477056,
+    "task_id": 3,
+    "subject": "GC48",
+    "session": "day15",
+    "chunk_idx": 10,
+    "random_val_state_r2": 0.8377999213776438,
+    "random_val_state_mse": 0.0004114166122799,
+    "random_val_neural_pde_rmse": 0.0685689644867634
+  },
+  "important_guardrail": "The median-performing example is selected transparently after fitting only for visualization; all quantitative claims use all 40 recordings."
+}

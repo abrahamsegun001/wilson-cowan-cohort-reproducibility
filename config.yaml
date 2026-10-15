@@ -1,0 +1,52 @@
+cohort:
+  subjects: [GC48, GC51, GC52, GC53, GC54, GC60, GC61, GC63, GC66, GC73]
+  sessions: [day0, day1, day7, day15]
+  recordings: 40
+  chunks_per_recording: 20
+  chunk_duration_s: 30
+
+preprocessing:
+  sampling_rate_hz: 30.0
+  field_of_view_mm: 10.0
+  production_grid: 64
+  data_dir: data/processed_64_linear
+
+model_selection:
+  tau_s: 1.0
+  nested_folds: 5
+  bootstrap_replicates: 1000
+  bootstrap_block_frames: 30
+  min_valid_fraction: 0.90
+  max_standardized_condition: 10.0
+  min_logit_improvement_percent: 0.10
+  min_pde_improvement_percent: 0.10
+  min_positive_fold_fraction: 0.60
+  max_smoothing_relative_range: 1.00
+  w_min: 0.5
+  w_max: 6.0
+  seed: 42
+
+reconstruction:
+  representative_target_chunk: 10
+  cold_start: true
+  sequential_transfer: false
+  continuity_loss: false
+  stage_a_steps: 2000
+  stage_b_steps: 3000
+  lbfgs_steps: 150
+  learning_rate_stage_a: 1.0e-3
+  learning_rate_stage_b: 2.0e-4
+  lambda_physics: 0.05
+  lambda_derivative: 1.0e-3
+  mu_residual_gradient: 1.0e-5
+  data_pool: 60000
+  validation_points: 15000
+  collocation_pool: 60000
+  derivative_pool: 20000
+  data_batch: 4096
+  collocation_batch: 4096
+  derivative_batch: 1024
+  fourier_features: 128
+  hidden_neurons: 256
+  hidden_layers: 6
+  seed: 42
