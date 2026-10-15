@@ -65,6 +65,8 @@ The committed `data/preprocessing_manifest_40.csv` defines the 40 recording task
 - 40 recordings
 - 20 contiguous 30-s chunks per recording
 - 800 chunks in the structural model-selection analysis
+- 738 inference-valid chunks in the primary nonlinear-dynamics analysis
+- all 800 chunks retained in a prespecified sensitivity analysis
 
 The mouse is the biological replication unit; chunks are repeated observations nested within recording/session and mouse.
 
@@ -169,7 +171,7 @@ bash scripts/collect_release_outputs.sh /path/to/gpinn_project
 python run_pipeline.py validate-release
 ```
 
-The release validator checks the expected 800-chunk selector/dynamics outputs, longitudinal and hierarchical tables, and 40-recording reconstruction metrics.
+The release validator checks the 800-chunk model-selection table, the 738-chunk inference-valid primary-dynamics table, the all-800-chunk sensitivity dynamics table, longitudinal and hierarchical outputs, and the 40-recording reconstruction metrics.
 
 ## Scientific interpretation
 

@@ -1,0 +1,12 @@
+{
+  "n_rows": 738,
+  "n_monostable": 274,
+  "n_bistable": 464,
+  "n_near_fold": 0,
+  "n_other": 0,
+  "fraction_bistable_descriptive": 0.6287262872628726,
+  "n_full_selected": 0,
+  "dispersion_interpretation": "For the selected one-population model with D_E >= 0, lambda(k) is non-increasing with k^2. A positive D_E spatially damps higher-wavenumber perturbations; it does not create a one-species Turing instability.",
+  "bifurcation_interpretation": "Regime labels describe the reduced model in normalized-fluorescence coordinates. They should not be interpreted as direct measurements of physiological cortical states.",
+  "replication_guardrail": "Chunk-level regime counts are repeated observations nested within sessions and mice, not independent biological replicates."
+}

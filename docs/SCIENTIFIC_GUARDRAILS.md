@@ -1,7 +1,7 @@
 # Scientific interpretation guardrails
 
 - `D_E = 0` selection is evidence against retaining a homogeneous isotropic Laplacian term under the frozen selector at the analyzed scales; it is not proof that cortex lacks spatial coupling.
-- The 800 chunks are repeated observations. The biological replication unit is the mouse (`n = 10`).
+- All 800 selector chunks are repeated observations; the primary dynamics analysis uses the 738 inference-valid chunks, while the all-800 analysis is sensitivity-only. The biological replication unit is the mouse (`n = 10`).
 - Fixed-parameter neural-network validation is within-chunk random-pointwise interpolation, not temporal forecasting.
 - Mono-/bistability is model-implied in normalized-fluorescence coordinates.
 - The scalar autonomous Wilson-Cowan reduction is interpreted through fixed points and saddle-node geometry, not classical excitatory-inhibitory Hopf oscillations.

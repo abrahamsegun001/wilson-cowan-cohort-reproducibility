@@ -1,0 +1,73 @@
+{
+  "input_rows": 738,
+  "n_subjects": 10,
+  "n_subject_sessions": 40,
+  "continuous_model": "linear mixed model with fixed session, random mouse intercept, random nested mouse-session intercept, and chunk residual",
+  "continuous_variance_partition": "intercept-only REML model; fractions partition mouse, mouse-session, and chunk/residual variability",
+  "bistability_GEE": {
+    "n_chunks": 738,
+    "n_mice": 10,
+    "covariance": "bias_reduced",
+    "working_correlation_alpha": 0.12512249721765492,
+    "session_joint_wald_chi2": 7.870861648692369,
+    "session_joint_df": 3,
+    "session_joint_p_supporting": 0.04875737910247068
+  },
+  "bistability_random_effects": {
+    "method": "statsmodels BinomialBayesMixedGLM variational Bayes",
+    "n_chunks": 738,
+    "mouse_log_sd": -1.7824869877866083,
+    "mouse_session_log_sd": 0.5716869307941531,
+    "mouse_sd_logit": 0.16821926734650886,
+    "mouse_session_sd_logit": 1.771252513000625,
+    "mouse_variance_logit": 0.02829772190659622,
+    "mouse_session_variance_logit": 3.137335464811029,
+    "logistic_residual_variance": 3.289868133696453,
+    "latent_mouse_ICC": 0.004383504936651629,
+    "latent_same_mouse_session_ICC": 0.4903775910798777,
+    "session_fixed_logit_variance_equal_session_weight": 0.1589933349086491,
+    "session_marginal_R2_latent": 0.02403710989178986,
+    "interpretation": "Random-effect variance estimates are latent-logit-scale descriptive heterogeneity estimates. GEE/Friedman results should be used for session inference."
+  },
+  "bistability_random_effects_error": null,
+  "continuous_failures": [],
+  "continuous_heterogeneity_ranking_descriptive": [
+    {
+      "outcome": "nearest_stable_lambda0",
+      "mouse_variance_fraction": 0.2849300741613305,
+      "session_marginal_R2": 0.04282827194824275
+    },
+    {
+      "outcome": "distance_to_nearest_fold_h",
+      "mouse_variance_fraction": 0.1463455375520719,
+      "session_marginal_R2": 0.03177640177615488
+    },
+    {
+      "outcome": "selected_h",
+      "mouse_variance_fraction": 0.07415900221850914,
+      "session_marginal_R2": 0.015598332192756978
+    },
+    {
+      "outcome": "selected_w_EE",
+      "mouse_variance_fraction": 0.011606961649252304,
+      "session_marginal_R2": 0.029510415137423866
+    },
+    {
+      "outcome": "nearest_stable_abs_state_distance",
+      "mouse_variance_fraction": 0.00407312192170188,
+      "session_marginal_R2": 0.11943543669559946
+    },
+    {
+      "outcome": "distance_to_cusp_wh",
+      "mouse_variance_fraction": 1.3976822825071308e-09,
+      "session_marginal_R2": 0.06875174342269758
+    }
+  ],
+  "guardrails": [
+    "Mouse is the biological replication unit; chunks are not independent biological replicates.",
+    "Phase 3B mouse-level Friedman tests remain the primary session-effect tests with n=10 mice.",
+    "Mixed-model/GEE session p-values are supporting model-based analyses.",
+    "Variance components quantify heterogeneity and do not establish biological causation.",
+    "Bistability is model-implied in normalized-fluorescence coordinates, not a direct physiological state label."
+  ]
+}

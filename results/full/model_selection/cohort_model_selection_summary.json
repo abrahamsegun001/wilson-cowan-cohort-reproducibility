@@ -1,0 +1,18 @@
+{
+  "n_recordings_completed": 40,
+  "n_subjects": 10,
+  "n_sessions_labels": 4,
+  "n_chunk_rows": 800,
+  "n_full_selected": 0,
+  "n_reduced_selected": 800,
+  "fraction_full_selected_descriptive": 0.0,
+  "n_chunks_D_boot_ci95_positive": 27,
+  "mean_full_regression_D_E": -0.011494225049573925,
+  "sd_full_regression_D_E": 0.03717672613622292,
+  "mean_selected_w_EE": 4.740171196256495,
+  "mean_selected_h": -2.3831509585769135,
+  "missing_recording_outputs": [],
+  "hierarchy": "chunk nested within recording/session nested within mouse",
+  "statistical_guardrail": "Do not treat the 800 chunk rows as independent biological replicates. Inferential longitudinal analysis should account for repeated measures within mouse.",
+  "selector_status": "frozen from one-session analysis; no cohort retuning"
+}

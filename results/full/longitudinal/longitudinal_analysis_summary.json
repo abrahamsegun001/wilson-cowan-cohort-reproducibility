@@ -1,0 +1,24 @@
+{
+  "input_rows": 738,
+  "n_subjects": 10,
+  "n_subject_sessions": 40,
+  "formal_replication_unit": "mouse",
+  "session_order": [
+    "day0",
+    "day1",
+    "day7",
+    "day15"
+  ],
+  "primary_outcome": "fraction_bistable per mouse-session",
+  "primary_friedman": {
+    "n_complete_mice": 10,
+    "chi2": 4.793814432989697,
+    "p": 0.18753280959217383
+  },
+  "guardrails": [
+    "Formal tests are performed on mouse-level session summaries, not on 738 chunk rows as independent replicates.",
+    "Bistability is model-implied in normalized-fluorescence coordinates and is not a direct physiological state label.",
+    "Pairwise Wilcoxon p-values are Holm-corrected within each outcome family.",
+    "Nearest-equilibrium stability was recomputed using the nearest STABLE equilibrium, correcting the earlier descriptive metric that could select the unstable middle branch in bistable chunks."
+  ]
+}
